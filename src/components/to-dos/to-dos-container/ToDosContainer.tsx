@@ -1,15 +1,13 @@
 "use client";
 
-import React, { useEffect } from "react";
-import classes from "./ToDosContainer.module.css";
-// import { useSelector, useDispatch } from "react-redux";
+import React from "react";
 import { useAppSelector } from "@/lib/hooks";
 import ToDoList from "../to-do-list/ToDoList";
 import ToDoForm from "../to-do-form/ToDoForm";
 import ToDoSelector from "../to-do-selector/ToDoSelector";
+import NoToDosParagraph from "../no-todos-paragraph/NoToDosParagraph";
 import { RootState } from "@/store/store";
-import { useAppDispatch } from "@/lib/hooks";
-// import { setVisibleTodos } from "@/store/reducers/todosSlice";
+import classes from "./ToDosContainer.module.css";
 
 const ToDosContainer: React.FC = () => {
   const todos = useAppSelector((state: RootState) => state.todos.allToDos);
@@ -28,13 +26,15 @@ const ToDosContainer: React.FC = () => {
 
   const visibleTodos = setVisibleTodos();
 
-  const dispatch = useAppDispatch();
-
   return (
     <section className={classes.container}>
       <ToDoForm />
       <ToDoSelector count={visibleTodos.length} />
-      <ToDoList items={visibleTodos} />
+      {visibleTodos.length > 0 ? (
+        <ToDoList items={visibleTodos} />
+      ) : (
+        <NoToDosParagraph filter={filter} />
+      )}
     </section>
   );
 };

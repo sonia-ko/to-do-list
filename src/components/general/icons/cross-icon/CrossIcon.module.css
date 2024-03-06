@@ -12,7 +12,7 @@
   left: 50%;
   width: 2.5px;
   height: 1.25rem;
-  background-color: black;
+  background-color: var(--primary-color);
 }
 
 .container::before {
@@ -26,4 +26,12 @@
 .container:hover {
   opacity: 0.5;
   cursor: pointer;
+}
+
+@media (max-width: 576px) {
+  .container::before,
+  .container::after {
+    width: 2px;
+    height: 1rem;
+  }
 }

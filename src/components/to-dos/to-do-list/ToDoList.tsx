@@ -1,7 +1,7 @@
 import React from "react";
-import classes from "./ToDoList.module.css";
 import { Todos } from "@/types/Todo";
 import ToDoItem from "../to-do-item/ToDoItem";
+import classes from "./ToDoList.module.css";
 
 const ToDoList: React.FC<Todos> = ({ items }) => {
   return (

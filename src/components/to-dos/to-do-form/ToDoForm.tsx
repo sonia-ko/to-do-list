@@ -1,11 +1,10 @@
 "use client";
 
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 import { useAppDispatch } from "@/lib/hooks";
 import { addTodo } from "@/store/reducers/todosSlice";
-import classes from "./ToDoForm.module.css";
 import { generateUniqueId } from "@/lib/utils";
+import classes from "./ToDoForm.module.css";
 
 const ToDoForm: React.FC = () => {
   const [todo, setTodo] = useState<string>("");

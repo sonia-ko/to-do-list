@@ -1,6 +1,5 @@
 import React from "react";
 import classes from "./CrossIcon.module.css";
-import { Todos } from "@/types/Todo";
 
 interface CrossIconProps {
   onClick?: () => void;

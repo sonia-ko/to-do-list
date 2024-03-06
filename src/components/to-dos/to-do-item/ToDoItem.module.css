@@ -1,11 +1,10 @@
 .container {
   list-style: none;
   margin: 0.5rem 0;
-  background-color: white;
+  background-color: var(--color-light);
   box-sizing: border-box;
-  border-radius: 0.75rem;
+  border-radius: var(--border-radius-s);
   display: flex;
-  grid-template-columns: 3rem 90% 2rem;
   justify-content: space-between;
   align-items: center;
   padding: 0 1rem;
@@ -30,4 +29,24 @@
 
 .uncompleted {
   border: 2px solid var(--yellow-color);
+}
+
+@media (max-width: 576px) {
+  .container {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem 1rem;
+  }
+
+  .cross {
+    order: -1;
+    align-self: flex-end;
+  }
+
+  .todo {
+    display: flex;
+    column-gap: 1rem;
+    width: 100%;
+    padding: 0.5rem 0 0.25rem;
+  }
 }

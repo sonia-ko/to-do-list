@@ -1,32 +1,17 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { Todo } from "@/types/Todo";
+import { Todo, Filters } from "@/types/Todo";
 
 interface TodosState {
   allToDos: Todo[];
-  filter: "all" | "completed" | "uncompleted";
+  filter: Filters;
 }
 
 const initialState: TodosState = {
   allToDos: [
     {
       id: "t1",
-      text: "complete to-do-list",
+      text: "create my first to-do",
       completed: false,
-    },
-    {
-      id: "t2",
-      text: "read a book",
-      completed: true,
-    },
-    {
-      id: "t3",
-      text: "excercise for 15 minutes",
-      completed: true,
-    },
-    {
-      id: "t4",
-      text: "drink coffee",
-      completed: true,
     },
   ],
 
@@ -53,10 +38,7 @@ const todosSlice = createSlice({
         state.allToDos[index].completed = !state.allToDos[index].completed;
       }
     },
-    setFilter(
-      state,
-      action: PayloadAction<"all" | "completed" | "uncompleted">
-    ) {
+    setFilter(state, action: PayloadAction<Filters>) {
       state.filter = action.payload;
     },
   },

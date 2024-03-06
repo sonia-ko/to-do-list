@@ -7,3 +7,9 @@ export interface Todo {
 export interface Todos {
   items: Todo[];
 }
+
+export type Filters = "all" | "completed" | "uncompleted";
+
+export interface Filter {
+  filter: "all" | "completed" | "uncompleted";
+}

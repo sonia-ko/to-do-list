@@ -1,14 +1,9 @@
 "use client";
 
 import React from "react";
-import classes from "./ToDoSelector.module.css";
-// import { useSelector, useDispatch } from "react-redux";
-import { useAppSelector } from "@/lib/hooks";
-import ToDoList from "../to-do-list/ToDoList";
-import ToDoForm from "../to-do-form/ToDoForm";
-import { RootState } from "@/store/store";
 import { useAppDispatch } from "@/lib/hooks";
 import { setFilter } from "@/store/reducers/todosSlice";
+import classes from "./ToDoSelector.module.css";
 
 interface ToDoSelectorProps {
   count: number;
@@ -36,7 +31,7 @@ const ToDoSelector: React.FC<ToDoSelectorProps> = ({ count }) => {
         </select>
       </div>
 
-      <div>Number of tasks: {count} </div>
+      <div className={classes.counter}>Number of tasks: {count} </div>
     </div>
   );
 };

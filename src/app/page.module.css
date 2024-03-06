@@ -1,5 +1,29 @@
 .main {
-  width: 80%;
+  width: 70%;
   margin: 0 auto;
   font-family: "Poppins", sans-serif;
+}
+
+@media (min-width: 1400px) {
+  .main {
+    width: 60%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .main {
+    width: 80%;
+  }
+}
+
+@media (max-width: 992px) {
+  .main {
+    width: 95%;
+  }
+}
+
+@media (max-width: 768px) {
+  .main {
+    width: 100%;
+  }
 }

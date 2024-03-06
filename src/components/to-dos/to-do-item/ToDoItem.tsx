@@ -1,11 +1,10 @@
 import React from "react";
-import classes from "./ToDoItem.module.css";
 import { Todo } from "@/types/Todo";
-import { useState } from "react";
 import { useAppDispatch } from "@/lib/hooks";
 import { toggleTodo, deleteTodo } from "@/store/reducers/todosSlice";
-import CrossIcon from "../general/icons/cross-icon/CrossIcon";
-import CircleIcon from "../general/icons/cross-icon/circle-icon/CircleIcon";
+import CrossIcon from "@/components/general/icons/cross-icon/CrossIcon";
+import CircleIcon from "@/components/general/icons/circle-icon/CircleIcon";
+import classes from "./ToDoItem.module.css";
 
 const ToDoItem: React.FC<Todo> = ({ id, text, completed }) => {
   const dispatch = useAppDispatch();
@@ -26,11 +25,11 @@ const ToDoItem: React.FC<Todo> = ({ id, text, completed }) => {
     >
       <div onClick={handleClick} className={classes.todo}>
         <CircleIcon color={completed ? "green" : "yellow"} />
-        <div>
-          {text} {completed && "- completed"}
-        </div>
+        <div>{text}</div>
       </div>
-      <CrossIcon onClick={handleCrossIconClick} />
+      <div className={classes.cross}>
+        <CrossIcon onClick={handleCrossIconClick} />
+      </div>
     </li>
   );
 };
