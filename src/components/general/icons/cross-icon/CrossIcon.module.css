@@ -1,0 +1,29 @@
+.container {
+  position: relative;
+  width: 1rem;
+  height: 1rem;
+}
+
+.container::before,
+.container::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 2.5px;
+  height: 1.25rem;
+  background-color: black;
+}
+
+.container::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.container::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.container:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
