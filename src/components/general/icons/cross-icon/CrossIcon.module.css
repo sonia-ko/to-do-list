@@ -28,7 +28,7 @@
   cursor: pointer;
 }
 
-@media (max-width: 576px) {
+@media (width <= 576px) {
   .container::before,
   .container::after {
     width: 2px;

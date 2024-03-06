@@ -14,7 +14,7 @@
   background-color: var(--yellow-color);
 }
 
-@media (max-width: 576px) {
+@media (width <= 576px) {
   .green,
   .yellow {
     width: 1rem;

@@ -31,11 +31,11 @@
   border: 2px solid var(--yellow-color);
 }
 
-@media (max-width: 576px) {
+@media (width <= 576px) {
   .container {
     flex-direction: column;
     align-items: flex-start;
-    padding: 1rem 1rem;
+    padding: 1rem;
   }
 
   .cross {

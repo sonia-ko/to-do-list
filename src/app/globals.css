@@ -23,7 +23,7 @@ html {
   max-width: 100vw;
   color: var(--primary-color);
   font-size: 1;
-  font-family: "Poppins", sans-serif;
+  font-family: Poppins, sans-serif;
 }
 
 body {
@@ -86,7 +86,7 @@ option {
   font-family: inherit;
 }
 
-@media (max-width: 992px) {
+@media (width <= 992px) {
   input,
   select,
   option,
@@ -95,7 +95,7 @@ option {
   }
 }
 
-@media (max-width: 576px) {
+@media (width <= 576px) {
   html {
     font-size: 0.9rem;
   }
