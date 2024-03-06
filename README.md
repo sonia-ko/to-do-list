@@ -8,7 +8,7 @@ This a project created using the following technologies:
 
 ## Demo
 
-The demo can be viewed [here:] (https://to-do-list-black-sigma.vercel.app/)
+The demo can be viewed [here](https://to-do-list-black-sigma.vercel.app/).
 
 ## Getting Started
 
