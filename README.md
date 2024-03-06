@@ -6,7 +6,9 @@ This a project created using the following technologies:
 - CSS Modules
 - TypeScript
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Demo
+
+The demo can be viewed [here:] (https://to-do-list-black-sigma.vercel.app/)
 
 ## Getting Started
 
