@@ -30,6 +30,7 @@ const ToDoForm: React.FC = () => {
       addTodo({ text: todo, id: generateUniqueId("todo"), completed: false })
     );
     setTodo("");
+    setButtonEnabled(false);
   };
 
   return (
